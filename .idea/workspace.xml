@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f96e66a3-a150-4803-9378-08a666ead551" name="Default" comment="" />
+    <list default="true" id="f96e66a3-a150-4803-9378-08a666ead551" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2015123456_name.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/overlap.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maze.py" afterPath="$PROJECT_DIR$/maze.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,27 +18,37 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="maze.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="maze.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/maze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="145" column="20" lean-forward="false" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
+            <state relative-caret-position="140">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#404#464#0" expanded="false" />
-                <element signature="e#1033#2614#0" expanded="false" />
+                <element signature="e#54#111#0" expanded="false" />
+                <element signature="e#381#433#0" expanded="false" />
+                <element signature="e#463#523#0" expanded="false" />
+                <element signature="e#567#822#0" expanded="false" />
+                <element signature="e#856#1085#0" expanded="false" />
+                <element signature="e#1123#2704#0" expanded="false" />
+                <element signature="e#2780#2925#0" expanded="false" />
+                <element signature="e#2954#3212#0" expanded="false" />
+                <element signature="e#3248#3681#0" expanded="false" />
+                <element signature="e#3708#4140#0" expanded="false" />
+                <element signature="e#4164#4404#0" expanded="false" />
+                <element signature="e#4427#4649#0" expanded="false" />
+                <marker date="1521319563083" expanded="false" signature="123:191" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overlap.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/overlap.py">
+      <file leaf-file-name="2015123456_name.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2015123456_name.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="336">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,15 +69,21 @@
       <find>0</find>
       <find>0.0</find>
       <find>True</find>
-      <find>print</find>
       <find>true</find>
+      <find>paths</find>
+      <find>print</find>
+      <find>110</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/overlap.py" />
         <option value="$PROJECT_DIR$/maze.py" />
+        <option value="$PROJECT_DIR$/overlap.py" />
+        <option value="$PROJECT_DIR$/2015123456_name.py" />
       </list>
     </option>
   </component>
@@ -71,6 +93,7 @@
     <option name="width" value="2326" />
     <option name="height" value="1258" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -89,6 +112,20 @@
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="circularMaze" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.5.2 (C:\Users\pancake\AppData\Local\Programs\Python\Python35\python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="circularMaze" />
@@ -120,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.maze">
+  <component name="RunManager" selected="Python.overlap">
     <configuration default="false" name="maze" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -151,7 +188,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="circularMaze" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/overlap.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\pancake\PycharmProjects\circularMaze\2015123456_name.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -227,8 +264,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.maze" />
-        <item index="1" class="java.lang.String" itemvalue="Python.overlap" />
+        <item index="0" class="java.lang.String" itemvalue="Python.overlap" />
+        <item index="1" class="java.lang.String" itemvalue="Python.maze" />
       </list>
     </recent_temporary>
   </component>
@@ -252,8 +289,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19650851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924527" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32923368" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924527" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924527" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -279,24 +316,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/overlap.py">
+    <entry file="file://$PROJECT_DIR$/maze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="140">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#54#111#0" expanded="false" />
+            <element signature="e#381#433#0" expanded="false" />
+            <element signature="e#463#523#0" expanded="false" />
+            <element signature="e#567#822#0" expanded="false" />
+            <element signature="e#856#1085#0" expanded="false" />
+            <element signature="e#1123#2704#0" expanded="false" />
+            <element signature="e#2780#2925#0" expanded="false" />
+            <element signature="e#2954#3212#0" expanded="false" />
+            <element signature="e#3248#3681#0" expanded="false" />
+            <element signature="e#3708#4140#0" expanded="false" />
+            <element signature="e#4164#4404#0" expanded="false" />
+            <element signature="e#4427#4649#0" expanded="false" />
+            <marker date="1521319563083" expanded="false" signature="123:191" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maze.py">
+    <entry file="file://$PROJECT_DIR$/2015123456_name.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="145" column="20" lean-forward="false" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
+        <state relative-caret-position="336">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#404#464#0" expanded="false" />
-            <element signature="e#1033#2614#0" expanded="false" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

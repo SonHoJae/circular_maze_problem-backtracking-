@@ -1,23 +1,26 @@
-import turtle
-import _thread
-import time
+from turtle import *
 
+# Simple class
 class Point:
     def __init__(self,x,y):
         self.x=x
         self.y=y
-
 class Line:
     def __init__(self,p1,p2):
         self.p1=p1
         self.p2=p2
 
+# Drawing maze
+turtle = Turtle()
+turtle.shape('circle')
 paths = set()
-turtle.tracer(0,0)
+tracer(0,0)
 
+# Intersection
 # http://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/
 def ccw(A,B,C):
     return (C.y-A.y) * (B.x-A.x) > (B.y-A.y) * (C.x-A.x)
+
 def intersect(A,B,C,D):
     return ccw(A,C,D) != ccw(B,C,D) and ccw(A,B,C) != ccw(A,B,D)
 
@@ -28,7 +31,8 @@ def circle(r, a):
         p1 = Point(turtle.pos()[0], turtle.pos()[1])
         turtle.circle(r,22.5)
         p2 = Point(turtle.pos()[0], turtle.pos()[1])
-        paths.add(Line(p1,p2))
+        if turtle.isdown():
+            paths.add(Line(p1,p2))
 
 # barrier on line
 def line():
@@ -42,7 +46,7 @@ def line():
     paths.add(Line(p1,p2))
 
 # sample maze
-def sampleMaze1():
+def sampleMaze():
     turtle.penup()
 
     # inner circle
@@ -135,13 +139,73 @@ def sampleMaze1():
     turtle.penup()
     turtle.home()
 
+# Check if agent_path intersects maze path
 def isBlocked(agent_path):
     for path in paths:
-        print(intersect(agent_path.p1,agent_path.p2, path.p1,path.p2))
+        if intersect(agent_path.p1,agent_path.p2, path.p1,path.p2):
+            return True
+            break
+    return False
 
-sampleMaze1()
-turtle.tracer(1,1)
-paths = list(paths)
-agent_path = Line(paths[1].p1,paths[1].p2)
-isBlocked(paths[0])
-turtle.mainloop()
+def init_agent(agent):
+    global circle_level
+    circle_level = 50
+    agent.penup()
+    agent.shape('circle')
+    agent.color('red')
+    agent.shapesize(.5)
+    agent.left(180)
+    agent.forward(circle_level)
+    agent.left(90)
+    agent.circle(circle_level,11.5+45)
+    tracer(1,1)
+
+# Actions
+def Forward(agent):
+    global circle_level
+    if circle_level < 110:
+        circle_level += 20
+        p1 = Point(agent.pos()[0], agent.pos()[1])
+        agent.right(90)
+        agent.forward(20)
+        agent.right(-90)
+        p2 = Point(agent.pos()[0], agent.pos()[1])
+        if isBlocked(Line(p1,p2)):
+            print('blocked')
+            circle_level -= 20
+            agent.right(90)
+            agent.backward(20)
+            agent.right(-90)
+
+def Backward(agent):
+    global circle_level
+    if circle_level > 50:
+        circle_level -= 20
+        p1 = Point(agent.pos()[0], agent.pos()[1])
+        agent.right(90)
+        agent.backward(20)
+        agent.right(-90)
+        p2 = Point(agent.pos()[0], agent.pos()[1])
+        if isBlocked(Line(p1,p2)):
+            print('blocked')
+            circle_level += 20
+            agent.right(90)
+            agent.forward(20)
+            agent.right(-90)
+
+def Right(agent):
+    turtle.home()
+    p1 = Point(agent.pos()[0], agent.pos()[1])
+    agent.circle(circle_level,-22.5)
+    p2 = Point(agent.pos()[0], agent.pos()[1])
+    if isBlocked(Line(p1,p2)):
+        print('blocked')
+        agent.circle(circle_level,22.5)
+
+def Left(agent):
+    p1 = Point(agent.pos()[0], agent.pos()[1])
+    agent.circle(circle_level,22.5)
+    p2 = Point(agent.pos()[0], agent.pos()[1])
+    if isBlocked(Line(p1,p2)):
+        print('blocked')
+        agent.circle(circle_level,-22.5)
