@@ -11,31 +11,11 @@ from datetime import datetime
 
 ''' Comment is necessary for code description '''
 ''' Plagiarism prohibited '''
-
+  
 def escape():
     # Write a function to escape from a maze here
+    print('Write a function to escape from a maze here')
 
-    #optimal path for sample maze
-    Left(agent)
-    Forward(agent)
-    Forward(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Backward(agent)
-    Right(agent)
-    Backward(agent)
-    Right(agent)
-    Forward(agent)
-    Right(agent)
-    Forward(agent)
-    Left(agent)
-    Left(agent)
-    Forward(agent)
 if __name__ == '__main__':
     # Maze
     screen = Screen()
@@ -44,7 +24,6 @@ if __name__ == '__main__':
     # Agent Init
     agent = Turtle()
     init_agent(agent)
-
     start = datetime.now()
     escape()
     finish = datetime.now()

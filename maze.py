@@ -187,7 +187,7 @@ def Forward(agent):
             agent.right(-90)
             print('blocked')
             return False
-		return True
+        return True
     return False
 
 def Backward(agent):
@@ -206,7 +206,7 @@ def Backward(agent):
             agent.forward(20)
             agent.right(-90)
             return False
-		return True
+        return True
     return False
 def Right(agent):
     global circle_level
@@ -219,7 +219,7 @@ def Right(agent):
             print('blocked')
             agent.circle(circle_level,22.5)
             return False
-		return True
+        return True
     return False
 
 def Left(agent):
@@ -232,5 +232,5 @@ def Left(agent):
             print('blocked')
             agent.circle(circle_level,-22.5)
             return False
-		return True
+        return True
     return False
