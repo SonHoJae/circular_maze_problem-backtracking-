@@ -5,11 +5,13 @@ class Point:
     def __init__(self,x,y):
         self.x=x
         self.y=y
+
 class Line:
     def __init__(self,p1,p2):
         self.p1=p1
         self.p2=p2
 
+SUCCESS_LEVEL = 110
 # Drawing maze
 turtle = Turtle()
 turtle.shape('circle')
@@ -151,6 +153,7 @@ def init_agent(agent):
     global circle_level
     circle_level = 50
     agent.penup()
+    agent.speed(1)
     agent.shape('circle')
     agent.color('red')
     agent.shapesize(.5)
@@ -158,12 +161,19 @@ def init_agent(agent):
     agent.forward(circle_level)
     agent.left(90)
     agent.circle(circle_level,11.5+45)
+    agent.pendown()
     tracer(1,1)
+
+def isSuccess():
+    # if outer radius 100
+    if circle_level == SUCCESS_LEVEL:
+        return True
+    return False
 
 # Actions
 def Forward(agent):
     global circle_level
-    if circle_level < 110:
+    if circle_level < SUCCESS_LEVEL:
         circle_level += 20
         p1 = Point(agent.pos()[0], agent.pos()[1])
         agent.right(90)
@@ -171,15 +181,18 @@ def Forward(agent):
         agent.right(-90)
         p2 = Point(agent.pos()[0], agent.pos()[1])
         if isBlocked(Line(p1,p2)):
-            print('blocked')
             circle_level -= 20
             agent.right(90)
             agent.backward(20)
             agent.right(-90)
+            print('blocked')
+            return False
+		return True
+    return False
 
 def Backward(agent):
     global circle_level
-    if circle_level > 50:
+    if circle_level > 50 and circle_level < SUCCESS_LEVEL:
         circle_level -= 20
         p1 = Point(agent.pos()[0], agent.pos()[1])
         agent.right(90)
@@ -192,20 +205,32 @@ def Backward(agent):
             agent.right(90)
             agent.forward(20)
             agent.right(-90)
-
+            return False
+		return True
+    return False
 def Right(agent):
-    turtle.home()
-    p1 = Point(agent.pos()[0], agent.pos()[1])
-    agent.circle(circle_level,-22.5)
-    p2 = Point(agent.pos()[0], agent.pos()[1])
-    if isBlocked(Line(p1,p2)):
-        print('blocked')
-        agent.circle(circle_level,22.5)
+    global circle_level
+    if circle_level < SUCCESS_LEVEL:
+        turtle.home()
+        p1 = Point(agent.pos()[0], agent.pos()[1])
+        agent.circle(circle_level,-22.5)
+        p2 = Point(agent.pos()[0], agent.pos()[1])
+        if isBlocked(Line(p1,p2)):
+            print('blocked')
+            agent.circle(circle_level,22.5)
+            return False
+		return True
+    return False
 
 def Left(agent):
-    p1 = Point(agent.pos()[0], agent.pos()[1])
-    agent.circle(circle_level,22.5)
-    p2 = Point(agent.pos()[0], agent.pos()[1])
-    if isBlocked(Line(p1,p2)):
-        print('blocked')
-        agent.circle(circle_level,-22.5)
+    global circle_level
+    if circle_level < SUCCESS_LEVEL:
+        p1 = Point(agent.pos()[0], agent.pos()[1])
+        agent.circle(circle_level,22.5)
+        p2 = Point(agent.pos()[0], agent.pos()[1])
+        if isBlocked(Line(p1,p2)):
+            print('blocked')
+            agent.circle(circle_level,-22.5)
+            return False
+		return True
+    return False

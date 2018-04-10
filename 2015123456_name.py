@@ -1,40 +1,57 @@
+import os
 from maze import *
 from turtle import *
+from datetime import datetime
+''' File Name format student#_Name e.g.) 2015123456_John'''
 
 ''' Write a function to escape from a maze with searching algorithm'''
-''' You are allowed to use 4 functions (Left, Right, Forward, Backward)'''
+''' You are allowed to use 5 functions (Left, Right, Forward, Backward, isSuccess) with agent actions '''
+''' Starting point will be given'''
+''' Program will be tested with different maze'''
+
 ''' Comment is necessary for code description '''
 ''' Plagiarism prohibited '''
-''' File Name format student#_Name e.g.) John_2015123456'''
-def escape():
-    Left(agent)
-    Forward(agent)
-    Forward(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Right(agent)
-    Backward(agent)
-    Right(agent)
-    Backward(agent)
-    Right(agent)
-    Forward(agent)
-    Right(agent)
-    Forward(agent)
-    Left(agent)
-    Left(agent)
-    Forward(agent)
 
+def escape():
+    # Write a function to escape from a maze here
+
+    #optimal path for sample maze
+    Left(agent)
+    Forward(agent)
+    Forward(agent)
+    Right(agent)
+    Right(agent)
+    Right(agent)
+    Right(agent)
+    Right(agent)
+    Right(agent)
+    Right(agent)
+    Backward(agent)
+    Right(agent)
+    Backward(agent)
+    Right(agent)
+    Forward(agent)
+    Right(agent)
+    Forward(agent)
+    Left(agent)
+    Left(agent)
+    Forward(agent)
 if __name__ == '__main__':
     # Maze
-    screen = Screen()  # create the screen
+    screen = Screen()
     sampleMaze()
-    # Agent
+
+    # Agent Init
     agent = Turtle()
     init_agent(agent)
 
+    start = datetime.now()
     escape()
+    finish = datetime.now()
+
+    # Result
+    print(os.path.basename(__file__).split('.')[0])
+    print('Result   : Pass') if isSuccess() else print('Result   : Fail')
+    print('Duration :', finish-start)
+
     mainloop()
